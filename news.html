@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>News landing</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <style>
+ /* Starts news new landing page */
+  .p-80{
+    padding:80px 0px;  
+   }
+   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+       background: #404040 !important;
+   }
+   .voice-of {
+      background: url('./corinne.png') no-repeat center;
+      background-size: cover;
+   }
+   .text-white{
+      color: white;
+   }
+   /* p.news-p-charity::after{
+      content: '';
+      border: solid #404040 !important;
+     border-width: 0 1px 1px 0 !important;
+     display: inline-block !important;
+     padding: 3px !important;
+     transform: rotate(-45deg);
+     -webkit-transform: rotate(-45deg);
+   } */
+   .font-bw
+   {
+      font-weight: 600 !important;
+      font-size: 16px;
+   }
+   .text-sblue{
+      color: #1C5DC5;
+      padding-top: 14px;
+   }
+   
+   .bg-red {
+       background: #E26262;
+       border-radius: 50px;
+       min-height: 50px;
+       min-width: 250px;
+   }
+   .bg-white {
+       background: #fff;
+       border-radius: 50px;
+       min-height: 50px;
+       min-width: 250px;
+   }
+   .for-flex{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   
+   }
+   .mb-4{
+      margin-bottom: 30px;
+   }
+   .mb-2-font{
+      font-size: 20px;
+   }
+   .clr-404040{
+      color: #404040;
+   }
+   h3.clr-404040
+   {
+      font-size:28px;
+      font-weight: 500;
+   }
+   .clr-red{
+      color: #901A1A;
+   }
+   
+   hr.clr-grey{
+   
+      height: 1px;
+      background-color: #404040;
+      border: none;
+   
+   }
+   hr.clr-F4F7FC{
+      height: 1px;
+           background-color: #F4F7FC;
+           border: none;
+   }
+   hr.clr-red{
+      height: 3px;
+      background-color: #901A1A;
+      border: none;
+      margin-bottom: 20px;
+   }
+   hr.clr-green{
+      height: 3px;
+      background-color: #26A39E;
+      border: none;
+      margin-bottom: 20px;
+   }
+   hr.clr-dyellow{
+      height: 3px;
+      background-color: #DAA40D;
+      border: none;
+      margin-bottom: 20px;
+   }
+   hr.clr-dblue{
+      height: 3px;
+      background-color: #10397B;
+      border: none;
+      margin-bottom: 20px;
+   }
+   hr.clr-sblue{
+      height: 3px;
+      background-color: #2799FA;
+      border: none;
+      margin-bottom: 20px;
+   }
+   hr.clr-lav{
+      height: 3px;
+      background-color: #C45ED8;
+      border: none;
+      margin-bottom: 20px;
+   }
+   hr.clr-lgreen{
+      height: 3px;
+      background-color: #B4DC55;
+      border: none;
+      margin-bottom: 20px;
+   }
+   .min-height-40{
+      min-height: 40px;
+   }
+   @media (max-width:576px){
+      .mt-sm-4{
+         margin-top: 30px;
+      }
+      .mt-sm-5{
+         margin-top: 30px;
+      }
+      .item {
+       padding: 16px;
+   }
+   }
+   
+   @media (max-width:767px) and (orientation: landscape){
+      .mt-sm-4{
+         margin-top: 30px;
+      }
+      .mt-sm-5{
+         margin-top: 30px;
+      }
+      .item {
+       padding: 16px;
+   }
+   }
+   @media (min-width:991px){
+      .mt-sm-4{
+         margin-top: 50px;
+      }
+      .mt-sm-5{
+         margin-top: 70px;
+      }
+   }
+   .clr-94C0DD{
+      color: #94C0DD;
+      font-weight: 600;
+   }
+   .clr-888888{
+      color: #888888;
+      font-weight: 600;
+   }
+   
+   .w-100{
+      width: 100% !important;
+      border-radius: 5px;
+   }
+   .font-12{
+      font-size: 12px;
+   }
+   .font-12-b{
+      font-size: 12px;
+      text-transform: uppercase;
+    
+   }
+   .font-10-b{
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 600;
+   }
+   .mt-3{
+      margin-top: 16px;
+   }
+   .mb-3{
+      margin-bottom: 16px;
+   }
+   .mt-2{
+      margin-top: 8px;
+   }
+   .mb-0{
+      margin-bottom: 0px;
+   }
+   .p-0{
+      padding: 0;
+   }
+   .news-p
+   {
+      color: #888888;
+   }
+   .news-p-large
+   {
+   color: #2D2D2D;
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 29px;
+   }
+   .news-p-charity
+   {
+      color: #2D2D2D;
+      font-size:14px;
+      font-weight: 500;
+   }
+    /*.pb-opinion-image-new {
+       width: 73px;
+       height: 73px;
+       margin-top: 10px;
+   } */
+   
+   .img-circle-new {
+       border-radius: 50%;
+   }
+   
+   /*==openion Sec==*/
+   /* .blog-row{
+       width: 100%;
+       float: left;
+   } */
+   /* .blog-row .blog-thumbnail{
+       width: 320px;
+       height: auto;
+       float: left;
+   } */
+   /* .blog-row .blog-description{
+      width: calc(100% - 100px);
+       margin-left: 94px;
+       float: left;
+       font-weight: 400;
+       font-size: 14px;
+       margin-top: -60px;
+   } */
+    /* .blog-row .blog-thumbnail {
+     width: 50px;
+     height: 50px;
+     float: left;
+     margin-bottom: 5px;
+   } */
+   .blog-description
+   {
+    font-size: 14px;
+   }
+   .blog-title{
+       font-size: 14px;
+       margin-bottom: 15px;
+       text-transform:none;
+      line-height: 21px;
+      text-align: left;
+      padding-left: 16px;
+    
+   }
+   .blog-title a{
+       color:#888888;
+   }
+   .blog-title a:hover{
+       color: #888888;
+   }
+   .read-p {
+       white-space: nowrap;
+   }
+   .font-14-b{
+      font-size: 12px;
+      font-weight: 700;
+      color: #1C5DC5;
+      text-transform: uppercase;
+   }
+   .arrow {
+     border: solid  #1C5DC5;
+     border-width: 0 2px 2px 0;
+     display: inline-block;
+     padding: 2.5px;
+     font-size: 12px;
+   }
+   .arrow-black
+   {
+      border: solid  #000;
+     border-width: 0 1.5px 1.5px 0;
+     display: inline-block;
+     padding: 2.4px;
+     font-size: 12px;
+   }
+   
+   .arrow-404040 {
+      border: solid  #404040;
+     border-width: 0 1.5px 1.5px 0;
+     padding: 2.4px;
+     font-size: 12px;
+     float: right;
+     margin-top: 10px;
+   }
+   .right-new {
+     transform: rotate(-45deg);
+     -webkit-transform: rotate(-45deg);
+   }
+   
+   .left-new {
+     transform: rotate(135deg);
+     -webkit-transform: rotate(135deg);
+   }
+   
+   .up-new {
+     transform: rotate(-135deg);
+     -webkit-transform: rotate(-135deg);
+   }
+   
+   .down-new {
+     transform: rotate(45deg);
+     -webkit-transform: rotate(45deg);
+   }
+   #rcorners1 {
+     border-radius: 10px;
+     background:rgba(28, 93, 197, 0.05);
+     width: 50px;
+     /* height: 22px;   */
+     font-size: 11px;
+     color: #000;
+     text-align:center;
+     font-weight: 600;
+   }
+   a:hover, a:visited, a:link, a:active {
+       text-decoration: none;
+   }
+   .right-viewall
+   {
+     float:right;
+     margin-top: -27px;
+   }
+   .charities
+   {
+      padding-top:30px;
+   }
+   .corporate-social
+   {
+      padding-top:30px;
+   }
+   .charity-div
+   {
+      padding-top:10px;
+   }
+   
+   /* carousel section */
+   .banner_sec{
+       clear: both;
+       background: #282f39;
+   }
+   .banner_sec .carousel-inner > .item{
+           text-align: center;
+       }
+   .banner_sec .carousel-inner > .item > img{
+           display: inline-block;
+       }
+   .banner_sec .carousel-caption{
+       bottom: auto;
+       top: 22%;
+   }
+   .banner_sec .carousel-caption .content{
+       margin-bottom: 40px;	
+   }
+   .banner_sec .carousel-caption h1{
+       font-size: 40px;
+       font-weight: 600;
+       text-transform: uppercase;
+       color: #ffffff;
+   }
+   .banner_sec .carousel-caption span.txt1{
+       font-size: 25px;
+       color: #d48f9e;
+       display: block;
+   }
+   .banner_sec .carousel-caption p{
+       font-size: 16px;
+       color: #ffffff;
+   }
+   .banner_sec .carousel-caption .btn1{
+       padding: 10px 20px;
+       font-size: 15px;
+   }
+   .banner_sec .carousel-control  .banner_sec .carousel-control {
+       font-size: 80px;
+       height: auto;
+       margin-top: -40px;
+   }
+   .banner_sec .carousel-indicators li{
+       background-color: #ffffff;
+       border: 1px solid #ffffff;
+   }
+   .banner_sec .carousel-indicators li.active{
+       background-color: #d48f9e;
+       border: 1px solid #d48f9e;
+   }
+   
+   .graybg {
+   
+       background: #efefef;
+   
+   }
+   .sec1 {
+   
+       padding: 70px 0;
+   
+   }
+   /*FAQ*/
+   .panel-title > a, .panel-title > a:active {
+     display: block;
+     font-size: 18px;
+     text-decoration: none;
+     outline: none;
+   }
+  /* .panel-heading a:before {
+     font-family: 'Glyphicons Halflings';
+     content: "\e114";
+     float: right;
+     transition: all 0.5s;
+   }*/
+   .panel-heading.active a:before {
+    content:url(images/downarrow.png);
+    float: right;
+}
+   /*.panel-heading.active a:before {
+     -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
+     transform: rotate(180deg);
+   }*/
+   .panel-group .panel {
+     margin-bottom: 15px;
+     
+   }
+   .accordions {
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: flex-start;
+     align-items: stretch;
+   }
+   .accordion {
+     width: 100%;
+     display: flex;
+     flex-flow: column nowrap;
+     justify-content: flex-start;
+     border: 1px solid #e5e5e5;
+     margin-bottom: 20px;
+   }
+   .accordion-heading {
+     padding: 15px 15px 15px;
+     cursor: pointer;
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: space-between;
+     align-items: center;
+     transition: background 300ms ease-in-out;
+   }
+   .accordion-heading h6 {
+     font-size: 16px;
+     margin: 0;
+   }
+   .accordion-heading:hover {
+     color: #6c9fd1;
+   }
+   .accordion-body {
+     width: 0px;
+     height: 0px;
+     max-height: 0px;
+     opacity: 0;
+     transition: max-height 5s ease;
+     border-top: 1px solid #e5e5e5;
+   }
+   .accordion-body .custom-select {
+     width: 100%;
+     margin-left: 0;
+   }
+   .accordion-body.open {
+     padding: 15px;
+     transition: max-height 5s ease;
+     width: auto;
+     height: auto;
+     max-height: 5000px;
+     opacity: 1;
+   }
+   .custom-select {
+     position: relative;
+     font-size: 14px;
+     display: inline-block;
+     margin-left: 15px;
+     width: 150px;
+   }
+   .custom-select select {
+     display: none; /*hide original SELECT element:*/
+   }
+   .panel-default>.panel-heading {
+       color: #2D2D2D;
+       background-color: #fff;
+       border-color: #fff;
+   }
+   .panel-default {
+        border-color: #fff; 
+   }
+  /* .panel-heading a:before {
+       font-family: 'Glyphicons Halflings';
+       content: "\e114";
+       float: right;
+       transition: all 0.5s;
+       font-size: 14px;
+       font-weight: 100;
+   } */
+   .panel-heading a:before {
+       content:url(images/uparrow.png);
+       float: right;
+   }
+   .panel-body p {
+     color: #888;
+   }
+   .mt-0{
+      margin-top: 0;
+   }
+   
+   @media (max-width:767px) {
+      .order-sm-1{
+         order: 1;
+      }
+    }
+    @media (max-width:767px) {
+      .b-div-m
+      {
+          width: 80%;
+      }
+      .s-div-m
+      {
+          width: 20%;
+      }
+      section.first-sec {
+        margin-top: -48px;
+    }
+   }
+   .news-p-dark
+      {
+         color: #2D2D2D;
+         font-size:18px;
+      }
+      .blog-description {
+        padding-left: 16px;
+      }
+      .slider-text-top {
+    
+        border-radius: 10px;
+        background:rgba(28, 93, 197, 0.05);
+        width: 50px;
+        height: 22px;  
+        font-size: 11px;
+        color: #000;
+        text-align:center;
+        font-weight: 600;
+    
+    }
+    .panel-heading {
+        padding: 10px 0px !important;
+    }
+    .panel-body {
+        padding: 10px 0px !important;
+    }
+    .pos-relative{
+        position: relative;
+     }
+     
+    .pos-absolute {
+         position: absolute;
+         top: 4%;
+         right: 4%;
+     }
+     
+     .bg-white-text {
+         background: white;
+         padding: 6px 12px 5px 12px;
+         border-radius: 30px;
+         margin-top: 0px;
+         margin-bottom: 0px;
+     
+     }
+     h3.clr-404040 {
+        font-size: 28px !important;
+        font-family: freigdisprosem !important;
+    }
+    .news-p-dark,h4.clr-888888
+    {
+        font-family: freigdispro !important;
+    }
+    /* Ends news new landing page */
+ </style>
+ <section class="first-sec">
+<div class="container">
+   <div class="row">
+      <div class="col-lg-12 for-flex">
+         <div class="col-sm-3 order-sm-1">
+            <h3 class="clr-404040">Featured</h3>
+               <hr class="mb-3 clr-grey">
+            <div class="box">
+                <div class="pos-relative">
+               <img src="image 15.png" class="w-100 pos-relative"> 
+               <p class="text-dark font-12 mt-2 mb-0 pos-absolute bg-white-text">SPONSORED</p> </div>
+               <div><p class="clr-94C0DD font-12 mt-2 mb-0">SOCIAL ISSUES <span class="clr-888888">•  DANIELLE KUTCHEL</span></p>
+               <p class="news-p">A little less conversation, a little more action needed on disability employment</p></div>
+               <hr class="clr-F4F7FC">
+            </div>
+            <div class="box">
+               <img src="Coss-corner.jpg" class="w-100">
+               <p class="clr-94C0DD font-12 mt-2 mb-0">SOCIAL ISSUES <span class="clr-888888">•  DANIELLE KUTCHEL</span></p>
+               <p class="news-p">A little less conversation, a little more action needed on disability employment</p>
+               <hr class="clr-F4F7FC">
+            </div>
+            <div class="box">
+               <img src="AlixFrost.png" class="w-100">
+               <p class="clr-94C0DD font-12 mt-2 mb-0">SOCIAL ISSUES <span class="clr-888888">•  DANIELLE KUTCHEL</span></p>
+               <p class="news-p">A little less conversation, a little more action needed on disability employment</p>
+               <hr class="clr-F4F7FC">
+            </div>
+         </div>
+         <div class="col-sm-6 ">
+            <h3 class="clr-404040">Latest</h3>
+               <hr class="mb-3 clr-grey">
+               <div class="box">
+			   <div class="pos-relative">
+               <img src="sampleimage.jpg" class="w-100 pos-relative"> 
+               <p class="text-dark font-12 mt-2 mb-0 pos-absolute bg-white-text">SPONSORED</p> </div>
+
+                  <p class="clr-94C0DD font-12 mt-2 mb-0">SOCIAL ISSUES <span class="clr-888888">•  DANIELLE KUTCHEL</span></p>
+                  <h4>Opening 10 new oil and gas sites is a win for fossil fuel companies – but a staggering loss for the rest of Australia</h4>
+                  <p class="news-p">A little less conversation, a little more action needed on disability employment</p>
+                  <hr class="clr-F4F7FC">
+               </div>
+               <div class="col-sm-12 p-0">
+                  <div class="col-sm-6">
+                     <div class="box">
+                        
+                        <img src="image 15.png" class="w-100">
+                        <p class="clr-94C0DD font-12 mt-2 mb-0">SOCIAL ISSUES <span class="clr-888888">•  DANIELLE KUTCHEL</span></p>
+                        <h4>Managing a professional profile on social media</h4>
+                        <p class="news-p">What does business casual on social media look like?
+
+                        </p>
+                        <hr class="clr-F4F7FC">
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="box">
+                          <div class="pos-relative">
+               <img src="image 15.png" class="w-100 pos-relative"> 
+               <p class="text-dark font-12 mt-2 mb-0 pos-absolute bg-white-text">SPONSORED</p> </div>
+                        <h4>A lot of work to do ahead of Jobs and Skills Summit</h4>
+                        <p class="news-p">CCA will hold a charities and NFP roundtable with the assistant minister for charities, ahead of the federal government's Jobs and Skills Summit, </p>
+                        <hr class="clr-F4F7FC">
+                     </div>
+                  </div>
+               </div>
+         </div>
+         <div class="col-sm-3">
+           <div> <h3 class="clr-404040">Contributors</h3><span class="font-10-b right-viewall">View all <i class="arrow-black right-new"></i></span> </div>
+               <hr class="mb-3 clr-grey">
+               <div class="box">
+                 <div class="col-sm-12 p-0">
+                  <p class="clr-94C0DD font-12-b mt-2 mb-0">SOCIAL ISSUES <span class="clr-888888">•  David Crosbie</span></p>
+                 </div>
+                 <div class="col-sm-12 p-0 for-flex">
+                  <div class="col-sm-3 p-0">
+                     <div class="blog-row">
+                        <a class="blog-img blog-thumbnail mt-3" href="blog-details.html"><img src="Kaushik-headshot-150x150.jpg" class="img-circle pb-opinion-image w-100 mt-3"></a>
+                     </div>
+                  </div>
+                  <div class="col-sm-9 p-0">
+                     <div class="blog-description">
+                        <h3 class="blog-title mt-3"><a href="blog-details.html"><p id="rcorners1">Opinion</p>"This is an important opportunity for charities to raise their issues and make the case for changes that will benefit them and the communities they serve."</a></h3>
+                     </div>
+                  </div>
+                 </div>
+                 <div class="col-sm-12 p-0">                         
+                  <a class="blog-img blog-thumbnail" href="blog-details.html"><p class="read-p font-14-b">Read Article <i class="arrow right-new"></i></p></a>
+                  <hr class="clr-F4F7FC">
+                 </div>
+               </div>
+               <div class="box">
+                  <div class="col-sm-12 p-0">
+                   <p class="clr-94C0DD font-12-b mt-2 mb-0">SOCIAL ISSUES <span class="clr-888888">•  David Crosbie</span></p>
+                  </div>
+                  <div class="col-sm-12 p-0 for-flex">
+                   <div class="col-sm-3 p-0">
+                      <div class="blog-row">
+                         <a class="blog-img blog-thumbnail mt-3" href="blog-details.html"><img src="Kaushik-headshot-150x150.jpg" class="img-circle pb-opinion-image w-100 mt-3"></a>
+                      </div>
+                   </div>
+                   <div class="col-sm-9 p-0">
+                      <div class="blog-description">
+                         <h3 class="blog-title mt-3"><a href="blog-details.html"><p id="rcorners1">Opinion</p>"This is an important opportunity for charities to raise their issues and make the case for changes that will benefit them and the communities they serve."</a></h3>
+                      </div>
+                   </div>
+                  </div>
+                  <div class="col-sm-12 p-0">                         
+                   <a class="blog-img blog-thumbnail" href="blog-details.html"><p class="read-p font-14-b">Read Article <i class="arrow right-new"></i></p></a>
+                   <hr class="clr-F4F7FC">
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="col-sm-12 p-0">
+                   <p class="clr-94C0DD font-12-b mt-2 mb-0">SOCIAL ISSUES <span class="clr-888888">•  David Crosbie</span></p>
+                  </div>
+                  <div class="col-sm-12 p-0 for-flex">
+                   <div class="col-sm-3 p-0">
+                      <div class="blog-row">
+                         <a class="blog-img blog-thumbnail mt-3" href="blog-details.html"><img src="Kaushik-headshot-150x150.jpg" class="img-circle pb-opinion-image w-100 mt-3"></a>
+                      </div>
+                   </div>
+                   <div class="col-sm-9 p-0">
+                      <div class="blog-description">
+                         <h3 class="blog-title mt-3"><a href="blog-details.html"><p id="rcorners1">Opinion</p>"This is an important opportunity for charities to raise their issues and make the case for changes that will benefit them and the communities they serve."</a></h3>
+                      </div>
+                   </div>
+                  </div>
+                  <div class="col-sm-12 p-0">                         
+                   <a class="blog-img blog-thumbnail" href="blog-details.html"><p class="read-p font-14-b">Read Article <i class="arrow right-new"></i></p></a>
+                   <hr class="clr-F4F7FC">
+                  </div>
+                </div>
+<!-- 
+               <div class="box">
+                  <div class="blog-row">
+                     <p class="clr-94C0DD font-12-b mt-2 mb-0">Charity & NFP<span class="clr-888888">•  BIANCA STERN </span></p>  
+                     <a class="blog-img blog-thumbnail" href="blog-details.html"><img src="Nevena-headshot-150x150.jpg" class="img-circle pb-opinion-image"><p class="read-p font-14-b"></p></a>
+                     <div class="blog-description">
+                        <h3 class="blog-title"><a href="blog-details.html"><p id="rcorners1">Opinion</p>"Many are using their generation's entrepreneurial skills to start their own organisations."</a></h3>
+                     </div>
+                     <a class="blog-img blog-thumbnail" href="blog-details.html"><p class="read-p font-14-b">Read Article <i class="arrow right-new"></i></p></a>
+                  </div>
+                  <hr class="clr-F4F7FC">
+               </div>
+
+               <div class="box">
+                   <div class="blog-row">
+                     <p class="clr-94C0DD font-12=b mt-2 mb-0">Social Issues <span class="clr-888888">•  Margaret Ambrose</span></p> 
+                     <a class="blog-img blog-thumbnail" href="blog-details.html"><img src="Kaushik-headshot-150x150.jpg" class="img-circle pb-opinion-image"> <p class="read-p font-14-b"></p></a>     
+                     <div class="blog-description">
+                        <h3 class="blog-title"><a href="blog-details.html"><p id="rcorners1">Opinion</p>"What can we do all do to claw back the security and dignity of single mothers to ensure their children can succeed in whatever field they choose?"</a></h3>
+                     </div>
+                     <a class="blog-img blog-thumbnail" href="blog-details.html"><p class="read-p font-14-b">Read Article  <i class="arrow right-new"></i></p></a>
+                  </div>
+                  <hr class="clr-F4F7FC">
+               </div> -->
+         </div>
+      </div>
+   </div>
+</div>
+ </section>
+   <section class="voice-of p-80">
+      <div class="container">
+         <div class="row ">
+         <div class="col-lg-12 for-flex">
+            <div class="col-sm-8 ">
+               <h2 class="text-white mb-4">The Voice of Australia’s Social Sector</h2>
+               <p class="text-white mb-2-font">
+                Brief persuasive copy about the mission and why we need your support <br> to keep news and emails free.
+               </p>
+            </div>
+            <div class="col-sm-4 ">
+             <div class="mt-3">
+                <button type="button" class="btn bg-red text-white mt-sm-4 font-bw">BECOME A SUBSCRIBER</button>
+             </div>
+            </div>
+         </div>
+         </div>
+      </div>
+   </section>
+
+<section class="charities">
+   <div class="container">
+      
+      <div class="col-lg-12 ">
+         <div>  <h3 class="clr-404040">Charities / NFP</h3><span class="font-10-b right-viewall">View all <i class="arrow-black right-new"></i></span></div>
+         <hr class="mb-3 clr-red">
+      </div>
+       <div class="row">
+         <div class="col-lg-12 for-flex">
+         <div class="col-sm-4">
+            <div class="box">
+               <img src="image 15.png" class="w-100">
+               <p class="clr-94C0DD font-12 mt-2 mb-0"><span class="clr-888888">DANIELLE KUTCHEL</span></p>
+               <p class="news-p-large">Tasmania’s anti-protest bill passes upper house as activists vow to fight on</p>
+               <hr class="clr-F4F7FC">
+            </div>
+        </div>
+        <div class="col-sm-4">
+         <div class="box">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+            <div class="charity-div"><p class="news-p-charity">A lot of work to do ahead of Jobs and Skills Summit<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+         </div>
+         <div class="box">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+            <div class="charity-div"><p class="news-p-charity">Five reasons we need more young leaders in NFPs<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+            <div><p class="news-p-charity">“Refreshing” roundtables begin as charities call for action on sector support<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+            <div><p class="news-p-charity">South Australian community housing trialling solar to reduce tenant bills <i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+         </div>
+      
+       </div>
+       <div class="col-sm-4">
+         <div class="box">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+            <div class="charity-div"><p class="news-p-charity">A lot of work to do ahead of Jobs and Skills Summit<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+         </div>
+         <div class="box">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+            <div class="charity-div"><p class="news-p-charity">Five reasons we need more young leaders in NFPs<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+            <div><p class="news-p-charity">“Refreshing” roundtables begin as charities call for action on sector support<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+            <div><p class="news-p-charity">South Australian community housing trialling solar to reduce tenant bills <i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+         </div>
+       </div>
+      </div>
+      </div>
+   </div>
+</section>
+
+<section class="corporate-social">
+   <div class="container">
+      <div class="col-lg-12 ">
+         <div>  <h3 class="clr-404040">Corporate Social Responsibility</h3><span class="font-10-b right-viewall">View all <i class="arrow-black right-new"></i></span></div>
+         <hr class="mb-3 clr-green">
+      </div>
+   <div class="row">
+      <div class="col-lg-12 for-flex">
+        <div class="col-sm-4">
+         <div class="box">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+            <div class="charity-div"><p class="news-p-charity">A lot of work to do ahead of Jobs and Skills Summit<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+         </div>
+         <div class="box">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+            <div class="charity-div"><p class="news-p-charity">Five reasons we need more young leaders in NFPs<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+            <div><p class="news-p-charity">“Refreshing” roundtables begin as charities call for action on sector support<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+            <div><p class="news-p-charity">South Australian community housing trialling solar to reduce tenant bills <i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+         </div>
+      </div>
+       
+       <div class="col-sm-4">
+         <div class="box">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+            <div class="charity-div"><p class="news-p-charity">A lot of work to do ahead of Jobs and Skills Summit<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+         </div>
+         <div class="box">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+            <div class="charity-div"><p class="news-p-charity">Five reasons we need more young leaders in NFPs<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+            <div><p class="news-p-charity">“Refreshing” roundtables begin as charities call for action on sector support<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+            <div><p class="news-p-charity">South Australian community housing trialling solar to reduce tenant bills <i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+         </div>
+       </div>
+       <div class="col-sm-4">
+         <div class="box">
+            <img src="image 15.png" class="w-100">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion<span class="clr-888888">•  Terence Jeyaretnam</span></p>
+            <p class="news-p-large">Tasmania’s anti-protest bill passes upper house as activists vow to fight on</p>
+            <hr class="clr-F4F7FC">
+         </div>
+     </div>
+      </div>
+      </div>
+   </div>
+</section>
+
+<section class="multicat">
+<div class="container">
+<div class="row">
+   <div class="col-lg-12 ">
+      <div class="col-sm-4">
+         <div><h3 class="clr-404040">Social Enterprise</h3><span class="font-10-b right-viewall">View all <i class="arrow-black right-new"></i></span></div>
+         <hr class="mb-3 clr-dyellow">
+         <div class="box">
+            <img src="image 15.png" class="w-100">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion<span class="clr-888888">•  Terence Jeyaretnam</span></p>
+            <p class="news-p-large">Tasmania’s anti-protest bill passes upper house as activists vow to fight on</p>
+         </div>
+         <div class="box">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+            <div class="charity-div"><p class="news-p-charity">A lot of work to do ahead of Jobs and Skills Summit<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+         </div>
+         <div class="box">
+            <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+            <div class="charity-div"><p class="news-p-charity">Five reasons we need more young leaders in NFPs<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+            <div><p class="news-p-charity">“Refreshing” roundtables begin as charities call for action on sector support<i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+            <div><p class="news-p-charity">South Australian community housing trialling solar to reduce tenant bills <i class="arrow-404040 right-new"></i></p></div>
+            <hr class="clr-F4F7FC">
+         </div>
+      </div>
+      <div class="col-sm-4">
+            <div><h3 class="clr-404040">Philanthropy</h3><span class="font-10-b right-viewall">View all <i class="arrow-black right-new"></i></span></div>
+            <hr class="mb-3 clr-dblue">
+            <div class="box">
+               <img src="image 15.png" class="w-100">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion<span class="clr-888888">•  Terence Jeyaretnam</span></p>
+               <p class="news-p-large">Tasmania’s anti-protest bill passes upper house as activists vow to fight on</p>
+            </div>
+            <div class="box">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+               <div class="charity-div"><p class="news-p-charity">A lot of work to do ahead of Jobs and Skills Summit<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+            </div>
+            <div class="box">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+               <div class="charity-div"><p class="news-p-charity">Five reasons we need more young leaders in NFPs<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+               <div><p class="news-p-charity">“Refreshing” roundtables begin as charities call for action on sector support<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+               <div><p class="news-p-charity">South Australian community housing trialling solar to reduce tenant bills <i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+            </div>
+      </div>
+      <div class="col-sm-4">
+            <div><h3 class="clr-404040">Social Issues</h3><span class="font-10-b right-viewall">View all <i class="arrow-black right-new"></i></span></div>
+            <hr class="mb-3 clr-sblue">
+            <div class="box">
+               <img src="image 15.png" class="w-100">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion<span class="clr-888888">•  Terence Jeyaretnam</span></p>
+               <p class="news-p-large">Tasmania’s anti-protest bill passes upper house as activists vow to fight on</p>
+            </div>
+            <div class="box">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+               <div class="charity-div"><p class="news-p-charity">A lot of work to do ahead of Jobs and Skills Summit<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+            </div>
+            <div class="box">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+               <div class="charity-div"><p class="news-p-charity">Five reasons we need more young leaders in NFPs<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+               <div><p class="news-p-charity">“Refreshing” roundtables begin as charities call for action on sector support<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+               <div><p class="news-p-charity">South Australian community housing trialling solar to reduce tenant bills <i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+            </div>
+      </div>
+   </div>
+   <div class="col-lg-12 ">
+      <div class="col-sm-2">
+       
+      </div>
+      
+      <div class="col-sm-4">
+            <div><h3 class="clr-404040">Philanthropy</h3><span class="font-10-b right-viewall">View all <i class="arrow-black right-new"></i></span></div>
+            <hr class="mb-3 clr-lav">
+            <div class="box">
+               <img src="image 15.png" class="w-100">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion<span class="clr-888888">•  Terence Jeyaretnam</span></p>
+               <p class="news-p-large">Tasmania’s anti-protest bill passes upper house as activists vow to fight on</p>
+            </div>
+            <div class="box">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+               <div class="charity-div"><p class="news-p-charity">A lot of work to do ahead of Jobs and Skills Summit<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+            </div>
+            <div class="box">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+               <div class="charity-div"><p class="news-p-charity">Five reasons we need more young leaders in NFPs<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+               <div><p class="news-p-charity">“Refreshing” roundtables begin as charities call for action on sector support<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+               <div><p class="news-p-charity">South Australian community housing trialling solar to reduce tenant bills <i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+            </div>
+      </div>
+      <div class="col-sm-4">
+            <div><h3 class="clr-404040">Social Issues</h3><span class="font-10-b right-viewall">View all <i class="arrow-black right-new"></i></span></div>
+            <hr class="mb-3 clr-lgreen">
+            <div class="box">
+               <img src="image 15.png" class="w-100">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion<span class="clr-888888">•  Terence Jeyaretnam</span></p>
+               <p class="news-p-large">Tasmania’s anti-protest bill passes upper house as activists vow to fight on</p>
+            </div>
+            <div class="box">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+               <div class="charity-div"><p class="news-p-charity">A lot of work to do ahead of Jobs and Skills Summit<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+            </div>
+            <div class="box">
+               <p class="clr-94C0DD font-12-b mt-2 mb-0">Openion</p>
+               <div class="charity-div"><p class="news-p-charity">Five reasons we need more young leaders in NFPs<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+               <div><p class="news-p-charity">“Refreshing” roundtables begin as charities call for action on sector support<i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+               <div><p class="news-p-charity">South Australian community housing trialling solar to reduce tenant bills <i class="arrow-404040 right-new"></i></p></div>
+               <hr class="clr-F4F7FC">
+            </div>
+      </div>
+      <div class="col-sm-2">
+      </div>
+   </div>
+</div>
+</div>
+</section>
+
+<section class="voice-of p-80">
+   <div class="container">
+      <div class="row ">
+      <div class="col-lg-12 for-flex">
+         <div class="col-sm-8 ">
+            <h2 class="text-white mb-4">Got a scoop? <br/>
+               Contact our Editorial team</h2>
+            <p class="text-white mb-2-font">
+               Brief persuasive copy about the mission and why we need your <br/> support to keep news and emails free.
+            </p>
+         </div>
+         <div class="col-sm-4 ">
+          <div class="mt-3">
+             <button type="button" class="btn bg-white text-sblue mt-sm-5 font-bw">CONTACT TEAM</button>
+          </div>
+         </div>
+      </div>
+      </div>
+   </div>
+</section>
+
+<section class="graybg sec1">
+<div class="container"> 
+  <div class="row">
+   <div class="col-sm-12 p-0">
+      <div class="owl-carousel owl-theme custom-owl-nav" id="what-we">
+         <div class="item">
+            <div class="">
+             <img src="forthelove.png" class="w-100">
+             <p class="text-dark font-12 mt-2 mb-0"><b>SPONSORED </b> <span class="clr-888888">•  AUTHOR NAME</span></p>
+             
+             <h4 class="min-height-40">Philanthropy conference to address big challenges</h4>
+             <p class="news-p clr-888888">A stellar lineup of more than 130 presenters and keynote speakers will outline the key challenges confronting philanthropy at the Philanthropy Australia national conference in September. </p>
+            </div>
+          </div>
+          <div class="item">
+             <div class="">
+              <img src="climate.png" class="w-100">
+              <p class="text-dark font-12 mt-2 mb-0"><b>SPONSORED </b> <span class="clr-888888">•  AUTHOR NAME</span></p>
+             
+             <h4 class="min-height-40">NFP sector must respond urgently to climate crisis</h4>
+             <p class="news-p clr-888888">The not for profit sector includes 600,000 organisations employing one in ten Australians, so why are we not doing more to address the climate crisis?</p>
+            </div>
+             </div>
+           <div class="item">
+             <div class="">
+              <img src="the-riding.png" class="w-100">
+              <p class="text-dark font-12 mt-2 mb-0"><b>SPONSORED </b> <span class="clr-888888">•  AUTHOR NAME</span></p>
+             
+             <h4 class="min-height-40">The Rising Role of Data in PR
+            </h4>
+             <p class="news-p clr-888888">It’s time to put data in the driving seat in public relations, to ensure strategies are truly insight-driven and performance is properly measured.</p>
+            </div>
+           </div>
+           <div class="item">
+            <div class="">
+             <img src="forthelove.png" class="w-100">
+             <p class="text-dark font-12 mt-2 mb-0"><b>SPONSORED </b> <span class="clr-888888">•  AUTHOR NAME</span></p>
+             
+             <h4>Philanthropy conference to address big challenges</h4>
+             <p class="news-p clr-888888">A stellar lineup of more than 130 presenters and keynote speakers will outline the key challenges confronting philanthropy at the Philanthropy Australia national conference in September. </p>
+            </div>
+          </div>
+              <div class="item">
+            <div class="">
+             <img src="forthelove.png" class="w-100">
+             <p class="text-dark font-12 mt-2 mb-0"><b>SPONSORED </b> <span class="clr-888888">•  AUTHOR NAME</span></p>
+             
+             <h4>Philanthropy conference to address big challenges</h4>
+             <p class="news-p clr-888888">A stellar lineup of more than 130 presenters and keynote speakers will outline the key challenges confronting philanthropy at the Philanthropy Australia national conference in September. </p>
+            </div>
+          </div>
+		      <div class="item">
+            <div class="">
+             <img src="forthelove.png" class="w-100">
+             <p class="text-dark font-12 mt-2 mb-0"><b>SPONSORED </b> <span class="clr-888888">•  AUTHOR NAME</span></p>
+             
+             <h4>Philanthropy conference to address big challenges</h4>
+             <p class="news-p clr-888888">A stellar lineup of more than 130 presenters and keynote speakers will outline the key challenges confronting philanthropy at the Philanthropy Australia national conference in September. </p>
+            </div>
+          </div>
+		      <div class="item">
+            <div class="">
+             <img src="forthelove.png" class="w-100">
+             <p class="text-dark font-12 mt-2 mb-0"><b>SPONSORED </b> <span class="clr-888888">•  AUTHOR NAME</span></p>
+             
+             <h4>Philanthropy conference to address big challenges</h4>
+             <p class="news-p clr-888888">A stellar lineup of more than 130 presenters and keynote speakers will outline the key challenges confronting philanthropy at the Philanthropy Australia national conference in September. </p>
+            </div>
+          </div>
+		      <div class="item">
+            <div class="">
+             <img src="forthelove.png" class="w-100">
+             <p class="text-dark font-12 mt-2 mb-0"><b>SPONSORED </b> <span class="clr-888888">•  AUTHOR NAME</span></p>
+             
+             <h4>Philanthropy conference to address big challenges</h4>
+             <p class="news-p clr-888888">A stellar lineup of more than 130 presenters and keynote speakers will outline the key challenges confronting philanthropy at the Philanthropy Australia national conference in September. </p>
+            </div>
+          </div>
+		      <div class="item">
+            <div class="">
+             <img src="forthelove.png" class="w-100">
+             <p class="text-dark font-12 mt-2 mb-0"><b>SPONSORED </b> <span class="clr-888888">•  AUTHOR NAME</span></p>
+             
+             <h4>Philanthropy conference to address big challenges</h4>
+             <p class="news-p clr-888888">A stellar lineup of more than 130 presenters and keynote speakers will outline the key challenges confronting philanthropy at the Philanthropy Australia national conference in September. </p>
+            </div>
+          </div>
+		      <div class="item">
+            <div class="">
+             <img src="forthelove.png" class="w-100">
+             <p class="text-dark font-12 mt-2 mb-0"><b>SPONSORED </b> <span class="clr-888888">•  AUTHOR NAME</span></p>
+             
+             <h4>Philanthropy conference to address big challenges</h4>
+             <p class="news-p clr-888888">A stellar lineup of more than 130 presenters and keynote speakers will outline the key challenges confronting philanthropy at the Philanthropy Australia national conference in September. </p>
+            </div>
+          </div>
+
+      </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+<section class="FAQ sec1">
+<div class="container">
+   <div class="row">
+      <div class="col-lg-12">
+      <div class="col-sm-8">
+         <h3 class="clr-404040">Frequently Asked Questions</h3>
+            <hr class="mb-3 clr-grey">  
+		<div class="panel-group marginT" id="accordion" role="tablist" aria-multiselectable="true">
+      
+	  
+	  <div class="panel panel-default">
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            <p>Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Cursus turpis massa tincidunt dui ut ornare lectus sit. vivamus at. Pellentesque habitant morbi tristique senectus et. Lectus quam id leo in. Massa vitae tortor condimentum lacinia quis vel eros. Aliquet bibendum enim facilisis gravida.</p>
+            <p>Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Cursus turpis massa tincidunt dui ut ornare lectus sit. Tellus in metus vulputate eu scelerisque felis imperdiet. Consequat id porta nibh venenatis. Ut enim blandit volutpat maecenas. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Pellentesque habitant morbi tristique senectus et. Lectus quam id leo in. Massa vitae tortor condimentum lacinia quis vel eros. Aliquet bibendum enim facilisis gravida.</p>
+            <p>Commodo elit at imperdiet dui accumsan sit amet. Elit ut aliquam purus sit amet luctus venenatis lectus. Praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla. Tincidunt id aliquet risus feugiat in. Eget nunc scelerisque viverra mauris in aliquam sem fringilla. Sollicitudin aliquam ultrices sagittis orci a scelerisque. Duis ut diam quam nulla porttitor massa id.</p></div>
+        </div>
+          <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Lorem ipsum dolor sit amet, consectetur   </a> </h4>
+      </div>
+	  
+	  
+      <div class="panel panel-default">
+      
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <p>Virtually all services provided at your primary care practitioner's office are included with membership. In addition, you get easy and direct access to your family doctor on phone, text, email or telemedicine. Medication and lab testing are offered at wholesale cost. More information is available on our membership page.</p>
+           <p> <a href="index.html#Services">Learn about membership in Metropolitan General Practice </a></p> </div>
+        </div>
+          <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Lorem ipsum dolor sit amet, consectetur ?</a> </h4>
+        
+      </div>
+	  
+      <div class="panel panel-default">
+       
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>Our office can provide primary care only for patients age eighteen years and above. We can provide a referral to a pediatrician or obstetrician. </p>
+          </div>
+        </div>
+		 <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Lorem ipsum dolor sit amet, consectetur  </a> </h4>
+        </div>
+      </div>
+      <div class="panel panel-default">
+       
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="panel-body">
+            <p>While most of our patients do carry insurance, we neither bill, nor require health insurance. By working with patient directly we can avoid inflated insurance prices and surprise bills. We provide personalized healthcare where your needs come first rather than those of insurance company. </p>
+            <p><a href="blog.html">Discover insurance and non-insurance options for health care coverage </a> </p></div>
+        </div>
+		 <div class="panel-heading" role="tab" id="headingFour">
+          <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Lorem ipsum dolor sit amet, consectetur  lorem ipsum dolor sit amet, consectetur  </a> </h4>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFive">
+          <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Lorem ipsum dolor sit amet, consectetur  </a> </h4>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+          <div class="panel-body">
+            <p> No. On the contrary you will reduce your healthcare expenses. </p>
+            <p>With health insurance a typical office visit would cost $300. Procedures can cost from $150-$350.</p>
+            <p>Cost of couple of these low-quality office visits with a procedure under insurance model will often equal the entire years DPC subscription fee and several other benefits.</p>
+            <p>When you have a plan with a large deductible you end up paying much more for office visits. With our plan you pay no copays or deductibles.  You also save substantially in tests, imaging and costs of medicine.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingSix">
+          <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">Lorem ipsum dolor sit amet, consectetur  </a> </h4>
+        </div>
+        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+          <div class="panel-body">
+            <p> No. Concierge medicine charges anywhere between $6,000-$10,000 per year. We charge less than $1,000 per year. We provide access to the physician in the office and on telemedicine during office hours. Patients can use phone support during afterhours. We also have discounted prices for most of the healthcare services.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingSeven">
+          <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">Lorem ipsum dolor sit amet, consectetur  </a> </h4>
+        </div>
+        <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+          <div class="panel-body">
+            <p> We are confident you will like the care we provide. We do not hold patients in any lock in commitments. Patients have the choice of discontinuing their membership at any time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingEight">
+          <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">Lorem ipsum dolor sit amet, consectetur  </a> </h4>
+        </div>
+        <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+          <div class="panel-body">
+            <p> Best outcomes are possible when you have the same physician taking care of you. This helps in building a good understanding of your medical conditions and what works best for you over an extended period. Ideally patients must have long term doctor -patient relationship.  However, we understand that some patients do not want a monthly commitment. We offer self-pay rates for those patients. </p>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+   <div class="box">
+      <h3>advertisement</h3>
+      <img src="image 15.png" class="w-100">
+      
+   </div>
+  </div>
+
+  </div>  
+</div>
+</div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+   $('#what-we').owlCarousel({
+      items:4,
+   dot:true,
+   loop:false,
+   nav:false,
+   margin:20, 
+   // navText: ["<div class='nav-btn prev-slide'></div>", "<div class='nav-btn next-slide'></div>"],     
+   responsive:{
+       0:{
+           items:1
+       },
+       600:{
+           items:1
+
+       },
+       1000:{
+           items:4
+       }
+   }
+});
+</script>
+  <script>
+   $('.panel-collapse').on('show.bs.collapse', function () {
+      $(this).siblings('.panel-heading').addClass('active');
+    });
+  
+    $('.panel-collapse').on('hide.bs.collapse', function () {
+      $(this).siblings('.panel-heading').removeClass('active');
+    });	
+  </script>
+</body>
+</html>
+
